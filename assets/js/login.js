@@ -11,9 +11,9 @@ async function login() {
 
     try {
         const body = { username, password }
-        
+
         const ret = await sendRequest(url, body);
-        localStorage.setItem("@acertpix", JSON.stringify(ret));
+        localStorage.setItem("@acertpix", ret);
 
         goToLogin();
     } catch (error) {
@@ -22,6 +22,6 @@ async function login() {
     }
 }
 
-function goToLogin(){
+function goToLogin() {
     window.location.href = "cadastrar-parceiro.html";
 }

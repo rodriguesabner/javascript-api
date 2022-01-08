@@ -3,13 +3,17 @@ const tokenUser = null;
 window.onload = function () {
     const storage = localStorage.getItem("@acertpix") || null;
     if (storage == null) {
-        window.location.href = "login.html";
+        redirectToLogin();
     } else {
-        const user = JSON.parse(storage);
+        const user = JSON.parse(storage);   
         if (user.token == null) {
-            window.location.href = "login.html";
+            redirectToLogin();   
         } else {
             tokenUser = user.token;
         }
     }
 };
+
+function redirectToLogin(){
+    location.href = "login.html";
+}
