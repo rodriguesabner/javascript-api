@@ -4,7 +4,7 @@ function fazPost(url, body, authorization=false)  {
     request.open("POST", url, true)
     request.setRequestHeader("Content-type", "application/json")
     if(authorization){
-    request.setRequestHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiI1MiIsInVuaXF1ZV9uYW1lIjoiV2VzbGVpIExpbWEiLCJyb2xlIjoiMiIsImVtYWlsIjoid2VzbGVpLmxpbWFAbGV3ZWNwLmNvbS5iciIsIkNvbXBhbnlJZCI6IjE4IiwibmJmIjoxNjQxNjUzMDAwLCJleHAiOjE2NDE3Mzk0MDAsImlhdCI6MTY0MTY1MzAwMH0.kP-d9ehz7hNY_Zm_o2X9HP0fx64F2MxZqU_MfHxM8Bk" + authorization)
+    request.setRequestHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" + authorization)
     }
 
     request.send(JSON.stringify(body))
