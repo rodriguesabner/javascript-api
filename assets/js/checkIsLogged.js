@@ -1,4 +1,4 @@
-const tokenUser = null;
+let tokenUser = null;
 
 window.onload = function () {
     const storage = localStorage.getItem("@acertpix") || null;
