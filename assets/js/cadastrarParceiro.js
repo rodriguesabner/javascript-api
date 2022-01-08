@@ -1,10 +1,10 @@
 const form = document.getElementById("form__cad_parceiro");
 form.addEventListener("submit", async function (event) {
     event.preventDefault();
-    await cadastrarParceiro();
+    await register();
 });
 
-async function cadastrarParceiro() {
+async function register() {
     const url = "Partner/Insert";
 
     const parceiro = document.getElementById("parceiro").value
@@ -16,7 +16,7 @@ async function cadastrarParceiro() {
     const city = document.getElementById("city").value
     const state = document.getElementById("state").value
 
-    cadastrarParceiros = {
+    const body = {
         "name": parceiro,
         "documentNumber": documentNum,
         "notificationFraudDate": notificationFraudDate,
@@ -28,7 +28,8 @@ async function cadastrarParceiro() {
     }
 
     try {
-        await sendRequest(url, cadastrarParceiros, tokenUser);
+        const data = await sendRequest(url, body, tokenUser);
+        console.log(data);
     } catch (error) {
         alert("Erro ao cadastrar parceiro");
         console.log(error);

@@ -9,15 +9,19 @@ async function login() {
     const username = document.getElementById("user").value;
     const password = document.getElementById("pass").value;
 
-
     try {
         const body = { username, password }
+        
         const ret = await sendRequest(url, body);
-
         localStorage.setItem("@acertpix", JSON.stringify(ret));
-        window.location.href = "cadastrar-parceiro.html";
+
+        goToLogin();
     } catch (error) {
         alert("Dados Inválidos, tente novamente");
         console.log(error);
     }
+}
+
+function goToLogin(){
+    window.location.href = "cadastrar-parceiro.html";
 }
