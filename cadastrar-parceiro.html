@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/cadastrarParceiro.css">
+
+    <title>AcertPix - Cadastrar Parceiro</title>
+</head>
+
+<body>
+    <div class="parceiro__wrapper">
+        <div class="parceiro__left">
+            <form id="form__cad_parceiro">
+            <h3>Cadastrar Parceiros</h3>
+    
+                <label for="parceiro">Parceiro:</label>
+                <input name="parceiro" id="parceiro" type="text">
+    
+                <label for="documentNum">CNPJ/CPF:</label>
+                <input name="documentNum" id="documentNum" type="text">
+    
+                <label for="notificationFraudDate">Data da Notificação da Fraude:</label>
+                <input name="notificationFraudDate" id="notificationFraudDate" type="text">
+    
+                <label for="debit">Valor do Débito:</label>
+                <input name="debit" id="debit" type="text">
+    
+                <label for="telephone">Telefone de Cadastro:</label>
+                <input name="telephone" id="telephone" type="text">
+    
+                <label for="address">Endereço do Parceiro:</label>
+                <input name="address" id="address" type="text">
+    
+                <label for="city">Cidade do Parceiro:</label>
+                <input name="city" id="city" type="text">
+    
+                <label for="state">Estado do Parceiro:</label>
+                <input name="state" id="state" type="text">
+    
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+
+        <div class="parceiro__right">
+            <img
+                src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+        </div>
+    </div>
+
+    <script src="assets/js/checkIsLogged.js"></script>
+    <script src="assets/js/cadastrarParceiro.js"></script>
+    <script src="assets/js/request.js"></script>
+
+</body>
+
+</html>
