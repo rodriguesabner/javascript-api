@@ -28,6 +28,7 @@ async function register() {
     }
 
     try {
+        console.log(tokenUser)
         const data = await sendRequest(url, body, tokenUser);
         console.log(data);
     } catch (error) {
